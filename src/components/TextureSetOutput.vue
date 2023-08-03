@@ -147,9 +147,9 @@ export default {
   mounted() {
     this.inputValue = {
       color: `${this.block}`,
-      mer: `${this.block}_mer`,
-      normal: `${this.block}_normal`,
-      heightmap: `${this.block}_heightmap`,
+      mer: `${this.block}_mr`,
+      normal: `${this.block}_n`,
+      heightmap: `${this.block}_h`,
     };
     this.displayValue = this.inputValue;
   },
@@ -229,10 +229,10 @@ export default {
       return JSON.stringify(this.textureSetData, null, 2);
     },
     merSuggestions() {
-      const list = [`${this.block}_mer`];
+      const list = [`${this.block}_mr`];
 
       if (!this.useColorValues.color) {
-        list.push(`${this.inputValue.color}_mer`);
+        list.push(`${this.inputValue.color}_mr`);
       }
 
       return list;
